@@ -151,8 +151,6 @@ var userFunctionStore = {
 		console.log("I am a " + this.type);
 	}
 };
-class adminFunctionStore extends userFunctionStore {}
-
 function userFactory(name, score) {
 	let user = Object.create(userFunctionStore);
 	user.type = "User";
@@ -160,7 +158,7 @@ function userFactory(name, score) {
 	user.score = score;
 	return user;
 }
-var adminFunctionStore /* Put code here */;
+var adminFunctionStore = Object.create(userFunctionStore); /* Put code here */
 
 function adminFactory(name, score) {
 	// Put code here
