@@ -4,7 +4,6 @@ _[ ] Create a class BookList
 _[ ] Create another class called Book
 
 BookLists should have the following properties:
-.
 
 1. Number of books marked as read
 2. Number of books marked not read yet

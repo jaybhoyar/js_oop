@@ -1,27 +1,26 @@
-console.log(this.document === document); // Output
+console.log(this.document === document); //  true
 
-console.log(this === window); //Output
+console.log(this === window); //true
 
 var myFunction = function() {
 	console.log(this);
 };
-myFunction(); // Output
+myFunction(); // Window
 
 function f1() {
 	"use strict";
 	return this;
 }
-console.log(f1() === window); //Output
+console.log(f1() === window); // false
 
 function foo() {
 	console.log("Simple function call");
 	console.log(this === window);
 }
 
-foo(); //Output ??
+foo(); // Simple function call  // true 
 console.log(this === window)(
 	// Output
-
 	// This for IIFE
 	function() {
 		console.log("Anonymous function invocation");

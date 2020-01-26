@@ -162,8 +162,13 @@ var adminFunctionStore = Object.create(userFunctionStore); /* Put code here */
 
 function adminFactory(name, score) {
 	// Put code here
+	let obj = new userFactory(name, score);
+	obj.type = "Admin";
+	return obj;
 }
-
+adminFactory.prototype.sharePublicMessage = function() {
+	console.log("Welcome users!");
+};
 /* Put code here for a method called sharePublicMessage*/
 
 var adminFromFactory = adminFactory("Eva", 5);

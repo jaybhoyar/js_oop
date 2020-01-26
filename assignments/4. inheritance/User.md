@@ -78,7 +78,7 @@ console.groupEnd();
 
 
 // 3. Classes
-  class createUser {
+  class User {
     constructor(name, score){
       this.name  = name;
       this.score  = score;
@@ -105,7 +105,7 @@ console.groupEnd();
       return this.balance;
    }
   }
-  let mike = createPaidUser('Mike', 27, 100);
+  let mike = PaidUser('Mike', 27, 100);
   console.group("Paid User");
   console.log("Name:", mike.name);
   console.log("Score:",mike.score);
